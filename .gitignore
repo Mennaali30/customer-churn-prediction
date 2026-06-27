@@ -1,0 +1,80 @@
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+.env
+*.env
+
+# Generated model artifacts (regenerate by running the notebook)
+best_churn_model.pkl
+scaler.pkl
+feature_columns.pkl
+feature_thresholds.pkl
+best_model_name.pkl
+
+# Generated plots
+eda_distributions.png
+eda_correlation.png
+evaluation.png
+shap_bar.png
+shap_beeswarm.png
+*.png
+*.jpg
+*.jpeg
+*.svg
+plots/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Data files
+*.csv
+*.xlsx
+*.parquet
+data/
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+
+# Logs
+*.log
+logs/
+
+# Secrets
+secrets.toml
+.streamlit/secrets.toml
+
+# Streamlit cache
+.streamlit/cache/

@@ -1,0 +1,41 @@
+# ── Customer Churn Prediction — requirements.txt ──────────────────────────
+# Install: pip install -r requirements.txt
+#
+# NOTES:
+# - pandas is capped at <3.0 because pandas 3.0 enforces Copy-on-Write,
+#   under which `df[col].fillna(value, inplace=True)`-style chained
+#   assignment silently no-ops instead of raising. This project's code
+#   uses `df[col] = df[col].fillna(value)` instead, which is CoW-safe and
+#   forward-compatible with pandas 3.0+, but the pin below is kept as an
+#   extra safety net for reproducibility.
+# - numpy is given a floor, not an exact pin. numpy==1.26.4 only has
+#   prebuilt wheels through Python 3.12 — on Python 3.13+ pip falls back
+#   to compiling from source, which fails on machines without a C compiler
+#   (Visual Studio Build Tools on Windows, Xcode CLI tools on macOS).
+#   Letting pip pick a compatible numpy avoids that build entirely.
+#   Recommended: use Python 3.11 or 3.12 for the smoothest install.
+
+# Core data science
+pandas>=2.2.2,<3.0
+numpy>=1.26.4,<3.0
+scikit-learn>=1.5.0,<1.6
+imbalanced-learn>=0.12.3,<0.13
+
+# Gradient boosting
+xgboost>=2.0.3,<2.1
+
+# Explainability
+shap>=0.45.1,<0.46
+
+# Model persistence
+joblib>=1.4.2,<1.5
+
+# Visualisation
+matplotlib>=3.9.0,<3.10
+seaborn>=0.13.2,<0.14
+
+# Web application
+streamlit>=1.35.0,<1.36
+
+# Utilities
+requests>=2.32.3,<3.0
