@@ -59,7 +59,8 @@ All fixes were verified by running the corrected notebook end-to-end and
 exercising the app's SHAP code path against the resulting model artifact.
 
 ---
-
+live demo:
+https://customer-churn-prediction-3yibxyivkyq6wggxz5kagg.streamlit.app/
 ## Demo
 
 ```
